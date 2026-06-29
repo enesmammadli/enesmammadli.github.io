@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Helvetica Neue Thin';
+  /* The '../' steps out of the css folder to find the fonts folder */
+  src: url('../fonts/HelveticaNeue Thin.ttf') format('truetype');
+  font-weight: 400; /* Regular weights are typically 400 */
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: url("../img/3bg.jpg"); /* This changes the main page background to dark */
+}
+
+.welcome-smiley {
+  position: absolute;
+  top: 25px;       /* Spacing from the top border of the box */
+  right: 25px;     /* Spacing from the right border of the box */
+  width: 40px;     /* Adjust the size to fit beautifully */
+  height: auto;    /* Keeps the aspect ratio intact */
+  opacity: 0.8;    /* Optional: slightly blends it into the minimalist style */
+}
+
+.welcome-smiley:hover {
+  content: url("../img/do_blink.png"); /* Path to your second image */
+  opacity: 1; /* Optional: make it fully bright on hover */
+  cursor: pointer; /* Makes it look clickable */
+}
+
+#main {
+    margin-left: 200px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+i {
+  color: #b1b1b1;
+  font-size: 13px;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+article.content {
+    width: 760px;
+}
+.content {
+    background-color: rgba(7, 7, 7, 0.842);
+    border-style: solid;
+    border-color: #333333;
+    border-width: 1px;
+    position: relative;
+    margin: 30px 0 0 30px;
+    float: left;
+    padding: 30px;
+}
+
+/* 2. THE TOP BAR CONTAINER */
+.top-bar {
+  background: #030303;
+  background: linear-gradient(180deg,rgb(3, 3, 3) 0%, rgb(10, 10, 10) 100%);
+  border-bottom-style: solid;
+  border-bottom-color: #747474;
+  border-bottom-width: 1px;
+  display: flex;
+  justify-content: space-between; /* Puts branding on left, links on right */
+  align-items: center; /* Centers items vertically */
+  padding: 10px 290px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* 3. BRANDING / LOGO AREA */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  
+  font-family: 'Helvetica Neue Thin', sans-serif;
+  font-weight: 400; /* Changed from 100 to 400 for Regular font files */
+  font-size: 24px;  
+  color: white;
+}
+
+a {
+  font-family: 'Helvetica Neue Thin', sans-serif;
+  font-weight: 400; /* Changed from 100 to 400 for Regular font files */
+  font-size: 24px;  
+  color: white;
+}
+
+
+/* 4. NAVIGATION LINKS */
+.nav-links {
+  list-style: none; 
+  display: flex;
+  align-items: center;
+  gap: 24px; 
+  /* NEW: This ensures the links come before the logo on the left */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none; /* Removes underline */
+  font-weight: 600;
+  font-size: 15px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Light fade effect when hovering over standard links */
+.nav-links a:hover {
+  opacity: 0.85;
+}
+
+/* 5. HIGHLIGHTED BUTTON (Open Source style) */
+.nav-links .btn-highlight {
+  background-color: rgba(255, 255, 255, 0.25); /* Subtle dark overlay container */
+  padding: 8px 16px;
+  border-radius: 4px; /* Slightly rounded edges */
+}
+
+.nav-links .btn-highlight:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Darkens further on hover */
+  opacity: 1; /* Keeps text fully bright */
+}

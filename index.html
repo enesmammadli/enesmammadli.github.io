@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>enesmammadli</title>
+  <link rel="icon" type="image/icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/7.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="top-bar">
+    <div class="logo-area">
+      <span class="brand-logo">enesmammadli</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Projects</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#about">Downloads</a></li>
+      <li><a href="https:/www.github.com/enesmammadli" class="btn-highlight">Profile</a></li>
+    </ul>
+  </nav>
+
+  <div id="main">
+    <article class="content">
+        <img src="img/do.png" alt="smiley" class="welcome-smiley" onmouseenter="playHoverSound()">
+        <audio id="hover-sound" src="audio/ding.wav" preload="auto"></audio>
+        <h1>welcome :)</h1>
+        <br>
+        <p>
+        hello mi amigo. </p>
+        <br>
+        <p>my name is enes. mainly i love to work on random projects from random ideas on my random mind. i freaking love minimalistic designs as my gui design preference. you will know more abt me once you meet me and decide to chat :D</p>
+        <br>
+        <br>
+        <i>~ 29.06.2026</i>
+        <div class="background">
+
+    </article>
+  </div>
+
+<script>
+    function playHoverSound() {
+      const sound = document.getElementById('hover-sound');
+      sound.currentTime = 0; // Rewinds the sound so it plays instantly on rapid hovers
+      sound.play().catch(error => {
+        // Catches browser blocking rules if the user hasn't interacted with the page yet
+        console.log("Audio playback prevented until user interacts with the page.");
+      });
+    }
+</script>
+
+
+</body>
+</html>
