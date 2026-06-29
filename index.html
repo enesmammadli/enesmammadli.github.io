@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>enesmammadli</title>
   <link rel="icon" type="image/icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="https://unpkg.com/7.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -44,9 +43,8 @@
 <script>
     function playHoverSound() {
       const sound = document.getElementById('hover-sound');
-      sound.currentTime = 0; // Rewinds the sound so it plays instantly on rapid hovers
+      sound.currentTime = 0;
       sound.play().catch(error => {
-        // Catches browser blocking rules if the user hasn't interacted with the page yet
         console.log("Audio playback prevented until user interacts with the page.");
       });
     }
